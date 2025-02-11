@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Event Calendar</title>
+    <link rel="stylesheet" href="Eventstyles.css">
+</head>
+<body>
+    <div class="calendar-container">
+        <h1>Event Calendar</h1>
+        <div class="nav-controls">
+            <button id="prev-month">Previous</button>
+            <select id="month-selector"></select>
+            <button id="next-month">Next</button>
+        </div>
+        <table>
+            <thead>
+                <tr>
+                    <th>Monday</th>
+                    <th>Tuesday</th>
+                    <th>Wednesday</th>
+                    <th>Thursday</th>
+                    <th>Friday</th>
+                    <th>Saturday</th>
+                    <th style="color: red;">Sunday</th>
+                </tr>
+            </thead>
+            <tbody id="calendar-body"></tbody>
+        </table>
+        <div class="event-form">
+            <h2>Schedule an Event</h2>
+            <button id="open-modal">Add Event</button>
+        </div>
+    </div>
+
+    <!-- Modal for Adding/Editing Events -->
+    <div id="event-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Add/Edit Event</h2>
+            <form id="event-form">
+                <label for="event-title">Event Title:</label>
+                <input type="text" id="event-title" name="event-title" required>
+                <label for="event-date">Date:</label>
+                <input type="date" id="event-date" name="event-date" required>
+                <label for="event-type">Event Type:</label>
+                <select id="event-type" name="event-type">
+                    <option value="work">Work</option>
+                    <option value="personal">Personal</option>
+                    <option value="holiday">Holiday</option>
+                </select>
+                <button type="submit">Save Event</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="calender.js"></script>
+</body>
+</html>
+
+
